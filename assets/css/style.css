@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: 0.7s;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #023047;
+  box-shadow: inset 0px 4px 14px rgb(146 146 146 / 31%);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to right, #023047, rgb(47, 117, 151));
+  border-radius: 1rem;
+  transition: 700ms;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(to right, rgb(47, 117, 151), #a7c9da);
+}
+
+body {
+  background-color: #023047;
+}
+
+h1 {
+  color: #f6f6f6;
+  text-align: center;
+  margin-top: 1.25rem;
+  margin-bottom: -0.75rem;
+}
+
+img {
+  width: 100%;
+}
+
+.card {
+  max-width: 550px;
+  background-color: #f6f6f6;
+  margin: 2rem auto;
+  border-radius: 0.2rem;
+}
+
+.profile {
+  padding: 1rem 1.25rem 0;
+  display: flex;
+}
+
+.avatar img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.profile-name {
+  padding: 0.5rem;
+}
+
+.profile-name h3 {
+  font-size: 17px;
+}
+
+.publication-date {
+  font-size: 11px;
+}
+
+/* post */
+
+.description {
+  margin: 0.5rem 1rem;
+  font-size: 14px;
+}
+
+.img-post {
+  margin: 0 1rem;
+}
+
+.interaction {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  padding: 1.35rem;
+}
