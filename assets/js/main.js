@@ -26,7 +26,7 @@ const post = [
 
   {
     id: 2,
-    description: "“La morte è l’unica saggia consigliera che abbiamo. Ogni volta che senti, come fai sempre, che tutto va male e stai per essere annientato, rivolgiti alla tua morte e chiedile se è proprio così. Lei ti dirà che stai sbagliando , che in realtà niente conta al di fuori del suo tocco. La morte ti dirà “non ti ho ancora toccato”.",
+    description: "“La morte è l’unica saggia consigliera che abbiamo. Ogni volta che senti, come fai sempre, che tutto va male e stai per essere annientato, rivolgiti alla tua morte e chiedile se è proprio così. Lei ti dirà che stai sbagliando, che in realtà niente conta al di fuori del suo tocco. La morte ti dirà “non ti ho ancora toccato”.",
     image:
       "https://www.coachingmagnetico.it/wp-content/uploads/2017/10/37036a882618b60477afb2969f8289b5-d5oaglj.jpg",
     avatar:
@@ -39,7 +39,7 @@ const post = [
   {
     id: 3,
     description:
-      "Movimenti e Danze Sacre di Gurdjieff per lo sviluppo armonico dell’Uomo <br> I Movimenti e le Danze Sacre sono un’antica disciplina tramandata per aiutare l’essere umano a contattare ed esplorare il proprio mondo interiore. Sono un insieme di movimenti differenti: figure geometriche, preghiere, danze femminili e rituali maschili provenienti dalla tradizione derviscia. La musica, creata da Gurdjieff è ricca di armonia, melodia e ritmo. Questi movimenti producono un cambiamento nel corpo, nella circolazione del sangue, nel ritmo respiratorio, portando uno stato di lucidità e di presenza cosciente.",
+      "Movimenti e Danze Sacre di Gurdjieff per lo sviluppo armonico dell’Uomo. <br> I Movimenti e le Danze Sacre sono un’antica disciplina tramandata per aiutare l’essere umano a contattare ed esplorare il proprio mondo interiore. Sono un insieme di movimenti differenti: figure geometriche, preghiere, danze femminili e rituali maschili provenienti dalla tradizione derviscia. La musica, creata da Gurdjieff è ricca di armonia, melodia e ritmo. Questi movimenti producono un cambiamento nel corpo, nella circolazione del sangue, nel ritmo respiratorio, portando uno stato di lucidità e di presenza cosciente.",
     image:
       "https://www.supernaturalcafe.it/wp-content/uploads/2016/01/gurdjieff1.jpg",
     avatar: "https://qcgonv.files.wordpress.com/2015/10/gurdjieff.jpeg",
@@ -57,10 +57,7 @@ stampiamo i post del nostro feed.
 
 const card = document.querySelector(".container");
 
-// for (let i = 0; i < post.length; i++) {
 post.forEach(singlePost => {
-//   const singlePost = post[i];
-//   const id = singlePost.id;
   const description = singlePost.description;
   const image = singlePost.image;
   const avatar = singlePost.avatar;
@@ -69,18 +66,18 @@ post.forEach(singlePost => {
   const publication = singlePost.publication;
 
   card.innerHTML += `
-      <div class="card">
+     <div class="card">
         <div class="profile">
-        <div class="avatar">
-            <img src="${avatar}" alt="">
-        </div>
-        <div class="profile-name">
-            <h3>${author}</h3>
-            <div class="publication-date">
-            ${publication}
+            <div class="avatar">
+                <img src="${avatar}" alt="">
             </div>
-        </div>
-    
+            <div class="profile-name">
+                <h3>${author}</h3>
+                <div class="publication-date">
+                    ${publication}
+                </div>
+            </div>
+
         </div>
         <div class="post">
             <div class="description">${description}</div>
@@ -89,12 +86,17 @@ post.forEach(singlePost => {
             </div>
         </div>
         <div class="interaction">
-            <div class="like"><i class="fa-solid fa-thumbs-up"></i><strong> Mi Piace</strong> </div>
-            <div class="like-numbers">Piace a <strong>${likes}</strong>  persone</div>
+            <button class="like"><i class="fa-solid fa-thumbs-up"></i><strong> Mi Piace</strong> </button>
+            <div class="like-numbers">Piace a <strong>${likes}</strong> persone</div>
         </div>
-      </div>
+     </div>
 
     `;
 })
 
-
+/* 
+Milestone 3
+Se clicchiamo sul tasto "Mi Piace" cambiamo il colore al testo del bottone e incrementiamo 
+il counter dei likes relativo. Salviamo in un secondo array gli id 
+dei post ai quali abbiamo messo il like.
+*/
